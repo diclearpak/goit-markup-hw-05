@@ -434,7 +434,9 @@
               />
               <button class="footer-form-button text-color-white" type="button">
                 Subscribe<svg class="icon icon-icon-send">
-                  <use xlink:href="symbol-defs.svg#icon-icon-send"></use>
+                  <use
+                    xlink:href="./icons/symbol-defs2.svg#icon-icon-send"
+                  ></use>
                 </svg>
               </button>
             </div>
@@ -451,40 +453,45 @@
           </p>
           <label for="name">Name</label>
           <div class="form-input-icons">
-            <svg>
-              <use xlink:href="./icons2/symbol-defs.svg#icon-person"></use>
+            <svg class="icon icon-icon-person">
+              <use xlink:href="./icons/symbol-defs2.svg#icon-icon-person"></use>
             </svg>
             <input type="text" id="name" name="name" />
           </div>
           <label for="phone">Phone</label>
           <div class="form-input-icons">
-            <svg>
-              <use xlink:href="./icons2/symbol-defs.svg#icon-telephone"></use>
+            <svg class="icon icon-icon-phone">
+              <use xlink:href="./icons/symbol-defs2.svg#icon-icon-phone"></use>
             </svg>
             <input type="text" id="phone" name="phone" />
           </div>
           <label for="email">Email</label>
           <div class="form-input-icons">
             <svg class="icon icon-mail">
-              <use xlink:href="./icons2/symbol-defs.svg#icon-mail"></use>
+              <use xlink:href="./icons/symbol-defs2.svg#icon-icon-mail"></use>
             </svg>
             <input type="email" id="email" name="email" />
           </div>
           <label for="textarea">Comment</label>
-
-          <textarea id="story" name="story" rows="5" cols="33">
-Text input
-</textarea
+          <textarea
+            class="textarea"
+            id="textarea"
+            name="textarea"
+            placeholder="Comment"
           >
+Text input</textarea
+          >
+
           <div class="form-checkbox">
             <input
               class="checkbox"
               type="checkbox"
-              id="terms-and-condisitons"
-              name="terms-and-condisitons"
+              id="terms-and-conditions"
+              name="terms-and-conditions"
             />
             <label for="terms-and-conditions">
-              I accept the terms and conditions of the Privacy Policy</label
+              I accept the terms and conditions of the
+              <a href="">Privacy Policy</a></label
             >
           </div>
           <button class="modal-button text-color-white" type="submit">

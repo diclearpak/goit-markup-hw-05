@@ -439,9 +439,8 @@ footer {
   gap: 16px;
 }
 
-.footer-form-input:focus {
-  border: 3px solid var(--eigth-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.footer-form > input[type='email']:focus {
+  border: 1px solid var(--eigth-color);
 }
 
 .footer-form-input::placeholder {
@@ -455,7 +454,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(#2e2f42b2, #2e2f42b2, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
   justify-content: center;
   align-items: center;
@@ -561,11 +560,6 @@ footer {
   background-color: var(--seventh-color);
 }
 
-.modal-form > div > input:focus,
-.modal-form > textarea:focus {
-  border: 3px solid var(--seventh-color);
-}
-
 .textarea {
   width: 100%;
   height: 100px;
@@ -577,8 +571,17 @@ footer {
   border-style: none;
 }
 
-.textarea:active {
-  border: 1px solid var(--fifth-color);
+input[type='text']:focus,
+input[type='email']:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--fifth-color);
+  box-shadow: 0 0 0 3px rgba(91, 95, 239, 0.1);
+}
+
+.form-input-icons:focus-within svg {
+  fill: #5b5fef;
+  color: #5b5fef;
 }
 
 .modal-text {
@@ -586,9 +589,44 @@ footer {
   text-align: center;
   font-size: 16px;
 }
-.form-checkbox {
+/* .form-checkbox {
   align-self: center;
+} */
+
+.form-checkbox input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+  flex-shrink: 0;
+  background-color: transparent;
+  vertical-align: middle;
 }
+
+.form-checkbox input[type='checkbox']:checked {
+  background-color: var(--seventh-color);
+  border-color: var(--seventh-color);
+}
+
+.form-checkbox input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 .form-checkbox > label {
   font-weight: 400;
   font-size: 12px;
